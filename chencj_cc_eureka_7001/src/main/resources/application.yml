@@ -1,0 +1,14 @@
+server:
+  port: 7001
+spring:
+  application:
+    name: master7001
+eureka:
+  instance:
+    hostname: master7001
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://backup7002:7002/eureka/,http://backup7003:7003/eureka/
+#http://${eureka.instance.hostname}:${server.port}/eureka/,

@@ -1,0 +1,8 @@
+server:
+  port: 8000
+eureka:
+  
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://master7001:7001/eureka,http://backup7002:7002/eureka,http://backup7003:7003/eureka#入住到eureka服务器的注册中心
