@@ -95,5 +95,9 @@
   	<module>chencj_rest_provider_8002</module>
   	<module>chencj_rest_provider_8003</module>
   	<module>chencj_rest_consumer_feign_8000</module>
+  	<module>chencj_rest_provider_hystrix_8001</module>
+  	<module>chencj_rest_provider_hystrix_dashboard_9001</module>
+  	<module>chencj_rest_consumer_hystrix_dashboard_9001</module>
+  	<module>chencj_cc_zuul_9014</module>
   </modules>
 </project>

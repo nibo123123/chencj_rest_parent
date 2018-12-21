@@ -1,0 +1,14 @@
+server:
+  port: 9014
+spring:
+  application:
+    name: chencjRestZuul
+
+eureka:
+  instance:
+    instance-id: chencjRestZuul9014
+    prefer-ip-address: true
+  client:
+    
+    service-url:
+      defaultZone: http://master7001:7001/eureka,http://backup7002:7002/eureka,http://backup7003:7003/eureka#入住到eureka服务器的注册中心

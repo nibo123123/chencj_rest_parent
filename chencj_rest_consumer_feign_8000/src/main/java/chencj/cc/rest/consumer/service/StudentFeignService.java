@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import chencj.cc.rest.entity.Student;
 
-@FeignClient(value="CHENCJRESTPROVIDER")
+//@FeignClient(value="CHENCJRESTPROVIDER")
+@FeignClient(value="CHENCJRESTPROVIDER",fallbackFactory=HystrixFallbackServiceImpl.class)
 public interface StudentFeignService {
 
 	@RequestMapping(value="/stu/showList",method=RequestMethod.GET)

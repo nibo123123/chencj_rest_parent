@@ -45,7 +45,9 @@ public class Consumer_Feign_8000_Controller {
 	@RequestMapping("/consumer/stu/showOne/{id}")
 	public Student showOne(@PathVariable(value="id") Long id){
 		//return restTemplate.getForObject(REST_URI_PREFIX+"/stu/showOne/"+id, Student.class);
-		return studentFeignService.showOne(id);
+		Student student = studentFeignService.showOne(id);
+		if(student==null)throw new RuntimeException();
+		return student;
 	}
 	
 	@RequestMapping("/consmer/stu/save")

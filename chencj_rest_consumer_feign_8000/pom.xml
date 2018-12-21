@@ -82,9 +82,14 @@
   	</dependency>
   	<!-- feign 依赖于eureka-->
   	<dependency>
-    <groupId>org.springframework.cloud</groupId>
-    <artifactId>spring-cloud-starter-feign</artifactId>
-    
-</dependency>
+	    <groupId>org.springframework.cloud</groupId>
+	    <artifactId>spring-cloud-starter-feign</artifactId>
+	    
+	</dependency>
+	<!-- hystrix 依赖于eureka-->
+  	<dependency>
+  		<groupId>org.springframework.cloud</groupId>
+  		<artifactId>spring-cloud-starter-hystrix</artifactId>
+  	</dependency>
   </dependencies>
 </project>

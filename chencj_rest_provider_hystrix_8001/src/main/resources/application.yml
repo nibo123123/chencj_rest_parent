@@ -1,0 +1,26 @@
+server:
+  port: 8001
+mybatis: 
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: chencj.cc.rest.entity
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+spring:
+  application:
+    name: chencjRestProvider
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/chencj_rest
+    username: root
+    password: 123456
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 10
+      
+eureka:
+  instance:
+    instance-id: chencjRestProvider_Hystrix
+  client:
+    service-url:
+      defaultZone: http://master7001:7001/eureka,http://backup7002:7002/eureka,http://backup7003:7003/eureka

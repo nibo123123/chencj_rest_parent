@@ -1,5 +1,10 @@
 server:
   port: 8000
+  
+feign: 
+  hystrix: 
+    enabled: true 
+
 eureka:
   
   client:
